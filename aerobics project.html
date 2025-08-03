@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>My hobbies</title>
+    <style>
+        body{background-color: aqua;
+        }
+        h1{text-align: center;}
+        h2{text-align: center;}
+        .container{max-width: 600;
+        background-color: aquamarine;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    img{max-width: 100%;
+    display: block;
+margin: auto;}
+    .theme-button{display: block;
+    margin:auto;}
+    .learn-button{display: block;
+    margin: auto;}
+    .learn-button:hover{cursor: pointer;
+    background-color: aqua;}
+    .contact-button{display: block;
+    margin: auto;}
+    .contact-button:hover{cursor: pointer;
+        
+    background-color: aqua;}
+
+.theme-button:hover{cursor: pointer;
+background-color: aqua;}
+footer{text-align: center;
+color: black;}
+.aerobics{border-radius: 10px;
+padding: 10px;
+transition: opacity 150ms ease-in-out;
+}
+ .dance{border-radius: 10px;
+transition: all 150ms ease-in-out;}
+.dance:hover{filter: contrast(80%);
+transform:scale(1.1);
+cursor: pointer;
+}
+P{ font: size 20px;
+line-height: 1.5;
+text-align:center ;}
+.grid{display: grid;
+grid: template columns 1fr 1fr 1fr 1fr;
+ grid-gap:20px;
+ margin: 15px 0;}
+
+ .grid img{width: 600px;
+    border-radius: 8px;
+    transition: all 150ms ease-in-out;
+}
+.grid img:hover{ cursor: pointer;
+
+filter: contrast(80%);
+transform: scale(1.1);}
+.dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .dark a {
+        color: plum;
+      }
+
+
+
+
+    </style>
+</head>
+<body>
+    <button class="theme-button">
+        Change theme
+    </button>
+    <div class="container">
+    
+    <h1>
+        Aerobics is my favorite hobby 
+    </h1>
+    <h2>
+        Helps you to distress and live a happy life
+    </h2>
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/882/original/OIP.jpg?1748523843 " alt="" width="600px"
+        class="dance"
+        />
+        </div>
+        <div class="grid">
+        
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/883/original/OIP.jpg?1748524544 " alt=""
+        width="600px"
+        class="aerobics"
+        />
+        </div>
+
+    
+
+        
+    <p>
+Aerobic exercises increase your heart rate and how much oxygen your body uses. The term aerobic means “with oxygen.” When you practice aerobic exercise, your breathing controls the amount of oxygen that reaches your muscles to help you burn energy and move.
+    </p>
+    <button class="learn-button">
+        <a href="https://www.healthline.com/health/fitness-exercise/aerobic-exercise-examples 
+        " target="_blank">
+    
+        Learn more about aerobics 
+        </a>
+        
+    </button>
+    <p>
+        <Button class="contact-button">
+            Contact me 
+
+        </Button>
+    </p>
+
+    <footer>
+        Coded by Innocentia Mothogwane
+    </footer>
+    <script>
+        function contactMe() {
+
+        let name=prompt("What is your name?");
+        let email=prompt("What is your email address?");
+        alert("Thank you,"+name+"!We will be in touch with you by email");}
+    
+    let contactButton=document.querySelector(".contact-button");
+    contactButton.addEventListener("click" ,contactMe);
+    function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+    
+
+
+
+        
+    </script>
+
+        
+</body>
+</html>
